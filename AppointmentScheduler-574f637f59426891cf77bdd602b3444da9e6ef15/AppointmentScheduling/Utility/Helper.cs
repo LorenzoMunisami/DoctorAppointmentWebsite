@@ -45,8 +45,10 @@ namespace AppointmentScheduling.Utility
 
         public static List<SelectListItem> GetTimeDropDown()
         {
-            int minute = 60;
+            int minute = 30;
             List<SelectListItem> duration = new List<SelectListItem>();
+            duration.Add(new SelectListItem { Value = minute.ToString(), Text = "30 mins" });
+            minute = minute + 30;
             for (int i = 1; i <= 12; i++)
             {
                 duration.Add(new SelectListItem { Value = minute.ToString(), Text = i + " Hr" });
