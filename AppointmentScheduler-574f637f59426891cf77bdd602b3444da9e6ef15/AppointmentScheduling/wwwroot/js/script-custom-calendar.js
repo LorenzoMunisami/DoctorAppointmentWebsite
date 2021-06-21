@@ -41,7 +41,7 @@ function InitializeCalendar() {
                                         description: data.description,
                                         start: data.startDate,
                                         end: data.endDate,
-                                        backgroundColor: data.isDoctorApproved ? "#28a745" : "#dc3545",
+                                        backgroundColor: data.isDoctorApproved ? "#28a745" : "orange",
                                         borderColor: "#162466",
                                         textColor: "white",
                                         id: data.id
