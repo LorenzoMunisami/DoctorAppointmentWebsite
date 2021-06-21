@@ -13,6 +13,7 @@ namespace AppointmentScheduling.Services
     {
         private readonly ApplicationDbContext _db;
         private readonly IEmailSender _emailSender;
+       
         public AppointmentService(ApplicationDbContext db, IEmailSender emailSender)
         {
             _db = db;
@@ -56,10 +57,12 @@ namespace AppointmentScheduling.Services
                     IsDoctorApproved = false,
                     AdminId = model.AdminId
                 };
+                
+
                 await _emailSender.SendEmailAsync(doctor.Email, "Appointment Created",
-                    $"Your appointment with {patient.Name} is created and in pending status");
+                    $"An appointment with {patient.Name} is created and is awaiting your approval on the Ethekwini Medical Practice Appointment website.");
                 await _emailSender.SendEmailAsync(patient.Email, "Appointment Created",
-                    $"Your appointment with {doctor.Name} is created and in pending status");
+                    $"Your appointment with Dr. {doctor.Name} is in pending status. Please visit the Ethekwini Medical Practice website to view your appointment status and details.");
                 _db.Appointments.Add(appointment);
                 await _db.SaveChangesAsync();
                 return 2;
