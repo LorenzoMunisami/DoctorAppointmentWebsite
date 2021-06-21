@@ -21,8 +21,8 @@ namespace AppointmentScheduling.Utility
             {
                 Resource = Send.Resource,
             }
-           .Property(Send.FromEmail, "ben.spark90@gmail.com")
-           .Property(Send.FromName, "Appointment Scheduler")
+           .Property(Send.FromEmail, "ethekwinimedicalpractice@gmail.com")
+           .Property(Send.FromName, "Ethekwini Medical Practice Appointment Scheduler")
            .Property(Send.Subject, subject)
            .Property(Send.HtmlPart, htmlMessage)
            .Property(Send.Recipients, new JArray {
