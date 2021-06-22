@@ -6,16 +6,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="wwwroot\lib\Content\banner.jpg" />
-    <None Include="wwwroot\lib\Content\Day hosp.png" />
-    <None Include="wwwroot\lib\Content\dentist.jpg" />
-    <None Include="wwwroot\lib\Content\diabetes.jpg" />
-    <None Include="wwwroot\lib\Content\Medic.jpg" />
-    <None Include="wwwroot\lib\Content\subacute.png" />
-    <None Include="wwwroot\lib\Content\virtual.png" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Mailjet.Api" Version="2.0.1" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="5.0.2" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="5.0.2" />
